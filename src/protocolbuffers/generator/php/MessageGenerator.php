@@ -338,6 +338,9 @@ class MessageGenerator
 
     public function defaultValueAsString(FieldDescriptorProto $field)
     {
+        if (!$field->hasDefaultValue()) {
+            return 'null';
+        }
         $default_value = null;
         switch ($field->getType()) {
             case \ProtocolBuffers::TYPE_DOUBLE:

@@ -206,7 +206,7 @@ class FieldDescriptorProto extends \ProtocolBuffers\Message
         "optional" => true,
         "repeated" => false,
         "packable" => false,
-        "default"  => "",
+        "default"  => null,
       )));
       $desc->addField(8, new \ProtocolBuffers\FieldDescriptor(array(
         "type"     => \ProtocolBuffers::TYPE_MESSAGE,
