@@ -101,6 +101,7 @@ class Compiler
         foreach ($req->getProtoFile() as $file) {
             /* @var $file FileDescriptorProto */
             $path  = $file->getName();
+            if (!is_file($path))  continue;
             $lines = preg_split("/\r?\n/", file_get_contents($path));
             $info = $file->getSourceCodeInfo();
 
